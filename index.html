@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive SWOT Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive SWOT Analysis Tool</h1>
+        <p>A simple framework for analyzing business problems and making strategic decisions.</p>
+        <p>SWOT stands for Strengths, Weaknesses, Opportunities, and Threats. It helps organizations understand their current situation before making important decisions.</p>
+    </header>
+
+    <section id="what-is-swot">
+        <h2>What is SWOT Analysis?</h2>
+        <p>SWOT is a business strategy framework used to evaluate a situation before making decisions. It categorizes factors into two main types: internal and external.</p>
+        <p>Strengths and Weaknesses are internal factors - things within your organization's control. Opportunities and Threats are external factors - things outside your organization's control that can affect your success.</p>
+    </section>
+
+    <section id="swot-cards">
+        <div class="cards-grid">
+            <div class="card strength">
+                <h3>Strengths</h3>
+                <p class="label">Internal Factor</p>
+                <p>Strengths are the advantages your organization already has. These can include resources, capabilities, experienced employees, strong reputation, or efficient systems.</p>
+                <p><strong>Example:</strong> A company may have strong customer data or highly skilled employees.</p>
+            </div>
+            <div class="card weakness">
+                <h3>Weaknesses</h3>
+                <p class="label">Internal Factor</p>
+                <p>Weaknesses are internal limitations or areas where the organization struggles or needs improvement.</p>
+                <p><strong>Example:</strong> Outdated technology or lack of experience with new tools.</p>
+            </div>
+            <div class="card opportunity">
+                <h3>Opportunities</h3>
+                <p class="label">External Factor</p>
+                <p>Opportunities are external situations or trends that could help the organization grow or improve.</p>
+                <p><strong>Example:</strong> New markets, emerging technologies, or increasing customer demand.</p>
+            </div>
+            <div class="card threat">
+                <h3>Threats</h3>
+                <p class="label">External Factor</p>
+                <p>Threats are external risks that could harm the organization.</p>
+                <p><strong>Example:</strong> New competitors, economic downturns, or regulatory changes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-swot-helps">
+        <h2>How SWOT Helps Decision Making</h2>
+        <p>SWOT analysis helps leaders make better strategic decisions by providing a comprehensive view of their situation:</p>
+        <ol>
+            <li>Look at what your organization does well (Strengths)</li>
+            <li>Identify internal limitations (Weaknesses)</li>
+            <li>Look for outside opportunities (Opportunities)</li>
+            <li>Identify outside risks (Threats)</li>
+        </ol>
+        <p>By examining all four areas together, organizations can develop strategies that leverage their strengths, address weaknesses, capitalize on opportunities, and mitigate threats.</p>
+    </section>
+
+    <section id="example">
+        <h2>Example SWOT Scenario</h2>
+        <p><strong>Problem:</strong> A company is considering adopting AI tools to improve customer support.</p>
+        <ul>
+            <li><strong>Strength:</strong> Strong customer data and experienced support team</li>
+            <li><strong>Weakness:</strong> Limited experience with AI technology</li>
+            <li><strong>Opportunity:</strong> AI could automate simple customer questions and reduce response time</li>
+            <li><strong>Threat:</strong> Poor AI responses could damage customer trust</li>
+        </ul>
+    </section>
+
+    <section id="next-step">
+        <h2>Next Step: Build Your Own SWOT Analysis</h2>
+        <p>In the next step, you'll be able to describe a problem your organization is facing and enter your own strengths, weaknesses, opportunities, and threats to create a personalized SWOT analysis.</p>
+    </section>
+
+    <section id="build-swot">
+        <h2>Build Your SWOT Analysis</h2>
+        <p>Start by describing the specific problem or challenge your organization is facing. Then, fill in the SWOT categories based on that situation to get a comprehensive view.</p>
+        <form id="swot-form">
+            <div class="form-group">
+                <label for="problem">Describe the problem your organization is facing</label>
+                <textarea id="problem" name="problem" required placeholder="Example: Our company is considering adopting AI tools to improve customer support, but we are unsure whether we have the resources, skills, and systems needed to do it successfully."></textarea>
+                <small>Be specific about the challenge, decision, or opportunity your organization is trying to evaluate.</small>
+            </div>
+            <div class="swot-inputs">
+                <div class="swot-card strength">
+                    <h3>Strengths</h3>
+                    <p>Internal advantages, resources, or capabilities your organization already has</p>
+                    <textarea name="strengths" placeholder="Example: Strong leadership support, experienced employees, loyal customers, quality data"></textarea>
+                </div>
+                <div class="swot-card weakness">
+                    <h3>Weaknesses</h3>
+                    <p>Internal limitations, gaps, or challenges that may hold the organization back</p>
+                    <textarea name="weaknesses" placeholder="Example: Limited budget, outdated systems, lack of training, unclear processes"></textarea>
+                </div>
+                <div class="swot-card opportunity">
+                    <h3>Opportunities</h3>
+                    <p>External trends, openings, or market conditions that could help the organization</p>
+                    <textarea name="opportunities" placeholder="Example: Growing demand, new technology, emerging markets, partnership opportunities"></textarea>
+                </div>
+                <div class="swot-card threat">
+                    <h3>Threats</h3>
+                    <p>External risks, competition, or outside pressures that could create problems</p>
+                    <textarea name="threats" placeholder="Example: Strong competitors, regulation changes, economic uncertainty, cybersecurity risks"></textarea>
+                </div>
+            </div>
+            <button type="submit" id="generate-btn">Generate Report</button>
+        </form>
+    </section>
+
+    <section id="report-section" style="display: none;">
+        <h2>SWOT Report</h2>
+        <div id="report-content"></div>
+        <div class="report-buttons">
+            <button id="edit-btn">Edit Inputs</button>
+            <button id="new-report-btn">Generate New Report</button>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

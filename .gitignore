@@ -1,0 +1,5 @@
+node_modules
+
+# Optional editor/temp files
+.DS_Store
+*.log
